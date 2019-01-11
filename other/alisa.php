@@ -8,8 +8,8 @@ function solution($AX, $AY, $BX, $BY)
 
     $g = gcd($v_x, $v_y);
 
-    $v_x = $v_x/$g;
-    $v_y = $v_y/$g;
+    $v_x = $v_x / $g;
+    $v_y = $v_y / $g;
 
     //turn the vector right (90 degrees clockwise)
     $v_turn_x = $v_y;
@@ -19,17 +19,22 @@ function solution($AX, $AY, $BX, $BY)
     return [$BX + $v_turn_x, $BY + $v_turn_y];
 }
 
-function gcd($a,$b) {
+function gcd($a, $b)
+{
 
     $a = abs($a);
     $b = abs($b);
 
-    if( $a < $b) { list($b, $a) = [$a,$b]; }
-    if( $b == 0) { return $a; }
+    if ($a < $b) {
+        list($b, $a) = [$a, $b];
+    }
+    if ($b == 0) {
+        return $a;
+    }
 
     $r = $a % $b;
 
-    while($r > 0) {
+    while ($r > 0) {
         $a = $b;
         $b = $r;
         $r = $a % $b;
@@ -37,6 +42,6 @@ function gcd($a,$b) {
     return $b;
 }
 
-var_dump(solution(-1,  3,  3,1));
+var_dump(solution(-1, 3, 3, 1));
 
 var_dump(solution(2, 2, 2, -3));
