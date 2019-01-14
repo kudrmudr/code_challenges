@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * Alice lives on a lattice. The lattice consists of points that have integer coordinates.
+ * One day Alice decided she wants to go for a walk. She starts at lattice point A and goes straight to lattice point B. After reaching B, she turns 90 degrees to the right and moves straight in that direction. What is the first lattice point that Alice will reach after the turn?
+ * The points A and B have coordinates (AX, AY) and (BX, BY) respectively. You can assume that A and B are distinct.
+ */
+
 function solution($AX, $AY, $BX, $BY)
 {
     //calculate vector for alisa direction
