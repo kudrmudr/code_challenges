@@ -1,5 +1,5 @@
 // The solution setup is where you can provide the candidate with the basic framework for their solution.
-package challenge
+package main
 
 import (
 	"sort"
@@ -37,4 +37,8 @@ func OrderByWeight(strn string) string {
 	})
 
 	return strings.Join(numbers, " ")
+}
+
+func main() {
+	println(OrderByWeight("1 99 12 4"))
 }
