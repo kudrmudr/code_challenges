@@ -21,7 +21,6 @@ func imbalance(weights []int) int {
 			}
 
 			res = res + max - min
-
 		}
 	}
 
